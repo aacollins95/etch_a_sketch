@@ -1,3 +1,10 @@
+:root {
+  --main-bg-color: coral;
+  //variables are fun use them!!!
+  //var(--main-bg-color)
+
+}
+
 html {
   height: 100%;
   margin: 0;
@@ -8,7 +15,7 @@ html {
 .container {
   border: 5px solid #044500;
   border-radius: 5px;
-  margin:auto;
+  margin: auto;
   width: 500px;
   height: 500px;
   display: grid;
@@ -22,6 +29,20 @@ html {
   height: 100%;
   border: 1px solid #044500;
   background-color: #8DCF8A;
+}
+
+.button {
+  background-color: #8DCF8A;
+  border-radius: 5px;
+  border: #044500 solid 5px;
+  color: #044500;
+  padding: 8px 16px;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  margin: auto;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .pix {

@@ -1,7 +1,15 @@
 function main() {
   const container = document.querySelector('.container');
   makeGrid(container,20);
+  makeButton();
+}
 
+function makeButton() {
+  //makes a button
+  var btn = document.querySelector('.button');
+  btn.addEventListener('click', () => {
+    alert("Hello World");
+});
 }
 
 function tag(box) {
