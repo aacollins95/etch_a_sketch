@@ -1,6 +1,6 @@
 function main() {
   const container = document.querySelector('.container');
-  makeGrid(container,16);
+  makeGrid(container,20);
 
 }
 
@@ -18,7 +18,9 @@ function makeGrid(container,n){
         //fills each row with n boxes
         const box = document.createElement('div');
         box.setAttribute('class','pix');
-        //box.addEventListener('click',tag(box))
+        //changes color at mouseover
+        box.addEventListener('mouseover',function(){
+          box.setAttribute('style','background-color: #166811')});
         flex.appendChild(box)
       }
     container.appendChild(flex);
