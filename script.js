@@ -1,15 +1,41 @@
+size = 20;
+
 function main() {
   const container = document.querySelector('.container');
-  makeGrid(container,20);
+  makeGrid(container,size);
   makeButton();
+}
+
+function deleteGrid(container) {
+  //removes all children from the given node
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
 }
 
 function makeButton() {
   //makes a button
   var btn = document.querySelector('.button');
-  btn.addEventListener('click', () => {
-    alert("Hello World");
-});
+  btn.addEventListener('click', resetFunction);
+}
+
+function resetFunction() {
+  //chnages each square back to og color, changes size
+  const container = document.querySelector('.container');
+  const phrase = "Enter an integer from (1-64) to resize the grid";
+  let newSize = prompt(phrase, size);
+
+  while (isNaN(Number(newSize)) || newSize < 1 || newSize > 64 ){
+    newSize = prompt(phrase, size);
+  }
+  
+  size = newSize;
+
+  deleteGrid(container);
+  makeGrid(container,size);
+
+
+  //assert
 }
 
 function tag(box) {
